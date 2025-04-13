@@ -9,7 +9,7 @@ const router = express.Router();
 // Đăng ký
 router.post('/register', async (req, res) => {
     try {
-        const { username, email, password } = req.body;
+            const { username, email, password } = req.body;
 
         const existingUser = await User.findOne({ email });
         if (existingUser) {
